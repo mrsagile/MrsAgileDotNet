@@ -1,0 +1,35 @@
+﻿@model Message
+
+<div class="container">
+    <div class="modal fade" tabindex="-1" id="aboutDetailSectionModal"
+         data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">@Model.MessageTitle</h4>
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        ×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <ul>
+                            @{
+                                foreach (var message in Model.MessageDetails)
+                                {
+                                    <li>@message.MessageSummary</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+            <button type="button" id="btnHideModal" class="btn btn-primary button button4" onclick="closeAboutDialog()">
+                Hide
+            </button>
+        </div>
+                </div>
+        </div>
+    </div>
+</div>

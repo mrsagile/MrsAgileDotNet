@@ -6,14 +6,22 @@
 
 }
 
-    <div class="col-xl-3 col-md-6 mb-4" >
+    <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow" style="background-color:#DAD9DF">
-            <a href="" class="btn stretched-link text-decoration-none text-left" style="height:150px">
-                <div class="card-body">
-                    <h3 class="fas fa-power-off" style="color:#33CCFF"></h3>
-                    <h5 class="card-title">@Model.MessageTitle</h5>
-                </div>
-            </a>
+           
+                <button id="@btnName" href="" 
+                        class="openAboutSectionModel btn stretched-link text-decoration-none text-left" 
+                        style="height:150px"
+                        onclick="openAboutDialog()">
+                    <div class="card-body">
+                        <h3 class="fas fa-power-off" style="color:#33CCFF"></h3>
+                        <h5 class="card-title">@Model.MessageTitle</h5>
+                    </div>
+                </button>
         </div>
+
+        <partial name="_AboutSectionModel" model="@Model" />
+
     </div>
+
     
