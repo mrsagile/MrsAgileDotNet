@@ -25,10 +25,9 @@ namespace MrsAgileWebSite.Services
                                         new Message(){Id = 104, MessageTitle="*" , MessageSummary="Implemented CI and CD systems with Jenkins, for Docker containers in Kubernetes clusters."},
                                         new Message(){Id = 105, MessageTitle="*" , MessageSummary="Experience in performance testing and performance tuning web applications."},
                                         new Message(){Id = 106, MessageTitle="*" , MessageSummary="Developed authentication and authorization modules for web applications. " },
-                                        new Message(){Id = 107, MessageTitle="*" , MessageSummary="Developed authentication and authorization modules for web applications. " },
-                                        new Message(){Id = 108, MessageTitle="*" , MessageSummary="Strong skills on software development full life cycle, design patterns and object - oriented development principles." },
-                                        new Message(){Id = 109, MessageTitle="*" , MessageSummary="Selected to represent the companies for several international conferences and meetings; TechEd Barcelona(October 2014), ING Group Amsterdam(June, 2008)" },
-                                        new Message(){Id = 110, MessageTitle="*" , MessageSummary="Highly experienced relational database designer and developer(Oracle, SQLServer, Postgres)" }
+                                        new Message(){Id = 107, MessageTitle="*" , MessageSummary="Strong skills on software development full life cycle, design patterns and object - oriented development principles." },
+                                        new Message(){Id = 108, MessageTitle="*" , MessageSummary="Selected to represent the companies for several international conferences and meetings; TechEd Barcelona(October 2014), ING Group Amsterdam(June, 2008)" },
+                                        new Message(){Id = 109, MessageTitle="*" , MessageSummary="Highly experienced relational database designer and developer(Oracle, SQLServer, Postgres)" }
             };
             return section1;
         }

@@ -1,2 +1,7 @@
-﻿body {
+﻿html, body {
+    height: 100%;
+}
+
+.flex-fill {
+    flex: 1;
 }
