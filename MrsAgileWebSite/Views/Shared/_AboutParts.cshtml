@@ -1,0 +1,30 @@
+﻿@model Message
+
+@{ 
+    var btnName = "btn_toggle" + Model.Id.ToString();
+    var aboutPartsDivName = "aboutPartsDivName" + Model.Id.ToString();
+
+}
+<div class="card">
+    <div class="card-body">
+        <a class="btn" href="#" id="@btnName" onclick="toggleText(aboutPartsDivName)">+</a>
+        <p class="card-title">@Model.MessageTitle</p>
+        <p class="card-text">@Model.MessageSummary</p>
+    </div>
+
+    <div id="@aboutPartsDivName" style="background : grey; visibility :collapse" >
+        <ul>
+          @{ if (Model.MessageDetails != null ) 
+                  {
+                  foreach (var detail in Model.MessageDetails)
+                  {
+                    <li>
+                        @detail.MessageSummary
+                    </li>
+                      }
+                  }
+              }
+        </ul>
+        
+    </div>
+</div>

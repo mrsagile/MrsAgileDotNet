@@ -1,0 +1,11 @@
+﻿@model AboutMessages
+
+    <div class="container">
+        
+        @foreach (var message in Model.Messages)
+        {
+            
+            <partial name="_AboutParts" model="@message" />
+        }
+
+    </div>

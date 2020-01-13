@@ -1,0 +1,15 @@
+﻿@model Message
+    <div class="container">
+        <div style="width:75vw">
+            <img src="~/images/msCertified.jpg" alt="microsoft certified" style="object-fit:cover ; margin-top:200px" />
+
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-title">@Model.MessageTitle</p>
+                    <p class="card-text">@Model.MessageSummary</p>
+
+                    <a asp-action="AboutSections" asp-controller="About" class="btn btn-primary">Read more...</a>
+                </div>
+
+            </div>
+        </div>
