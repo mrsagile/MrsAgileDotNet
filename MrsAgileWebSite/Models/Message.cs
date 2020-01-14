@@ -10,6 +10,7 @@ namespace MrsAgileWebSite.Models
        public int Id { get; set; }
        public string MessageTitle { get; set; }
        public string MessageSummary { get; set; }
+       public string MessageFooter { get; set; }
        public List<Message> MessageDetails { get; set; }
     }
 }

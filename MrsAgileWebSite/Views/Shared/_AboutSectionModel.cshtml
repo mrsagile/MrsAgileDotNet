@@ -1,8 +1,12 @@
 ﻿@model Message
 
+
+
+@{ var modelId = "aboutDetailSectionModal_" + Model.Id.ToString();
+        }
 <div class="container">
-    <div class="modal fade" tabindex="-1" id="aboutDetailSectionModal"
-         data-keyboard="false" data-backdrop="static">
+    <div class="modal fade" tabindex="-1" id="@modelId"
+         data-keyboard="false" data-backdrop="stuatic">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -18,14 +22,31 @@
                             @{
                                 foreach (var message in Model.MessageDetails)
                                 {
-                                    <li>@message.MessageSummary</li>
+                                    if (message.MessageTitle == "*")
+                                    {
+                                            <li>@message.MessageSummary</li>    
+                                    }
+                                    else
+                                    {
+                        <li>
+                            
+                            <div class="border-dark">
+                                <h5 class="text-black-50">@message.MessageTitle</h5>
+                                <span class="border-left">
+                                    @message.MessageSummary
+                                </span>
+                            </div>
+                            <hr />
+                        </li>
+                                    }
+
                                 }
                             }
                         </ul>
                     </div>
                 </div>
                 <div class="modal-footer">
-            <button type="button" id="btnHideModal" class="btn btn-primary button button4" onclick="closeAboutDialog()">
+            <button type="button" id="btnHideModal" class="btn btn-primary button button4" onclick="closeAboutDialog(@Model.Id)">
                 Hide
             </button>
         </div>

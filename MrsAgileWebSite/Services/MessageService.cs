@@ -17,30 +17,62 @@ namespace MrsAgileWebSite.Services
 
         private List<Message> _cv { get; set; }
 
-        private List<Message> GetSection1Details()
+        private List<Message> GetSummaryOfExperienceDetails(int id )
         {
-            var section1 = new List<Message>() {  new Message(){Id = 101, MessageTitle="*" , MessageSummary="Developed Internet Banking application used by millions of customers – (https://www.ingbank.com.tr/en)."},
-                                        new Message(){Id = 102, MessageTitle="*" , MessageSummary="Working with the latest .NET Technologies and software development technologies. (.NET Core, SignalR, Razor pages, React, Bootstrap, JavaScript, CI, TDD, DDD, JQuery, HTML, MVC, WebApi, EF, WF, WCF)."},
-                                        new Message(){Id = 103, MessageTitle="*" , MessageSummary="Managing releases of distributed, high traffic applications used by 900 users uploading 1000s documents per second. (Task Parallel Library, WF Asynchronous Activities, and SQL Server)."},
-                                        new Message(){Id = 104, MessageTitle="*" , MessageSummary="Implemented CI and CD systems with Jenkins, for Docker containers in Kubernetes clusters."},
-                                        new Message(){Id = 105, MessageTitle="*" , MessageSummary="Experience in performance testing and performance tuning web applications."},
-                                        new Message(){Id = 106, MessageTitle="*" , MessageSummary="Developed authentication and authorization modules for web applications. " },
-                                        new Message(){Id = 107, MessageTitle="*" , MessageSummary="Strong skills on software development full life cycle, design patterns and object - oriented development principles." },
-                                        new Message(){Id = 108, MessageTitle="*" , MessageSummary="Selected to represent the companies for several international conferences and meetings; TechEd Barcelona(October 2014), ING Group Amsterdam(June, 2008)" },
-                                        new Message(){Id = 109, MessageTitle="*" , MessageSummary="Highly experienced relational database designer and developer(Oracle, SQLServer, Postgres)" }
-            };
-            return section1;
+            var locId = id * 100;
+            return ( new List<Message>() {  new Message(){Id = ++locId  , MessageTitle="*" , MessageSummary="Developed Internet Banking application used by millions of customers – (https://www.ingbank.com.tr/en)."},
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Working with the latest .NET Technologies and software development technologies. (.NET Core, SignalR, Razor pages, React, Bootstrap, JavaScript, CI, TDD, DDD, JQuery, HTML, MVC, WebApi, EF, WF, WCF)."},
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Managing releases of distributed, high traffic applications used by 900 users uploading 1000s documents per second. (Task Parallel Library, WF Asynchronous Activities, and SQL Server)."},
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Implemented CI and CD systems with Jenkins, for Docker containers in Kubernetes clusters."},
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Experience in performance testing and performance tuning web applications."},
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Developed authentication and authorization modules for web applications. " },
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Strong skills on software development full life cycle, design patterns and object - oriented development principles." },
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Selected to represent the companies for several international conferences and meetings; TechEd Barcelona(October 2014), ING Group Amsterdam(June, 2008)" },
+                                        new Message(){Id = ++locId, MessageTitle="*" , MessageSummary="Highly experienced relational database designer and developer(Oracle, SQLServer, Postgres)" }
+            });
+         }
+
+        private List<Message> GetTechnicalSkillsDetails(int id)
+        {
+            var locId = id * 100; 
+           return( new List<Message>() {  new Message(){Id = ++locId, 
+                                                        MessageTitle ="Languages" , 
+                                                        MessageSummary="C, C#, ASP.NET, ASP.NET Core, SignalR, React, Angular, TypeScript, JavaScript, jQuery, HTML, CSS, Node"},
+                                        new Message(){Id = ++locId, 
+                                                        MessageTitle="Data Technology" , 
+                                                        MessageSummary="Redis, Postgres, SQL Server, ORACLE 9i, 10g, PLSQL, INFORMIX, T-SQL, SSIS, SSRS"},
+                                        new Message(){Id = ++locId,
+                                                        MessageTitle="Operating Systems" ,
+                                                        MessageSummary="Windows, Unix, Linux"},
+                                        new Message(){Id = ++locId,
+                                                        MessageTitle="Methodologies" ,
+                                                        MessageSummary="Agile , Scrum, Waterfall , PRINCE2"},
+                                        new Message(){Id = ++locId,
+                                                        MessageTitle="Configuration Management" ,
+                                                        MessageSummary="Jenkins, BitBucket Pipelines, Git, TFS, SourceSafe, ClearCase, TeamCity, Docker"},
+            });      
         }
+
+        private List<Message> GetEducationDetails(int id)
+        {
+            return (new List<Message>());
+        }
+
+        private List<Message> GetEmploymentHistoryDetails(int id)
+        {
+            return (new List<Message>());
+        }
+
         public MessageService()
         {
             _cv = new List<Message>() { new Message(){Id = 1, MessageTitle="Summary of Experience" , MessageSummary="High performance secure web sites ...",
-                                                              MessageDetails= GetSection1Details()},
+                                                              MessageDetails= GetSummaryOfExperienceDetails(1)},
                                         new Message(){Id = 2, MessageTitle="Technical Skills" , MessageSummary="DotNet, JS, SQLServer, Cloud, Containers, CD Pipelines ...",
-                                        MessageDetails= GetSection1Details()},
+                                        MessageDetails= GetTechnicalSkillsDetails(2)},
                                         new Message(){Id = 3, MessageTitle="Education" , MessageSummary="Bachelor of Science ...",
-                                        MessageDetails= GetSection1Details()},
+                                        MessageDetails= GetEducationDetails(3)},
                                         new Message(){Id = 4, MessageTitle="Employment History" , MessageSummary="Software Architecture Consultant...",
-                                        MessageDetails= GetSection1Details()}
+                                        MessageDetails= GetEmploymentHistoryDetails(4)}
                                         };
     
         }

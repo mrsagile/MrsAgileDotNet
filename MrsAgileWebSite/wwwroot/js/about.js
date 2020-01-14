@@ -2,11 +2,16 @@ $(document).ready(function () {
   //  $("#aboutDetailSectionModal").modal('show');
 });
 
-
-var openAboutDialog = function () {
-    $("#aboutDetailSectionModal").modal('show');
+var GetModelId = function (id) {
+    return "#aboutDetailSectionModal_" + id;
 };
 
-var closeAboutDialog = function () {
-    $("#aboutDetailSectionModal").modal('hide');
+var openAboutDialog = function (id) {
+    let Modelid = GetModelId(id);
+    $(Modelid).modal('show');
+};
+
+var closeAboutDialog = function (id) {
+    let Modelid = GetModelId(id);
+    $(Modelid).modal('hide');
 };
