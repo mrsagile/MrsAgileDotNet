@@ -22,26 +22,12 @@
                             @{
                                 foreach (var message in Model.MessageDetails)
                                 {
-                                    if (message.MessageTitle == "*")
-                                    {
-                                            <li>@message.MessageSummary</li>    
-                                    }
-                                    else
-                                    {
-                        <li>
-                            
-                            <div class="border-dark">
-                                <h5 class="text-black-50">@message.MessageTitle</h5>
-                                <span class="border-left">
-                                    @message.MessageSummary
-                                </span>
-                            </div>
-                            <hr />
-                        </li>
-                                    }
-
+                                    <partial name="_AboutSectionModelList" model="message" />
+                                  
                                 }
+
                             }
+                            
                         </ul>
                     </div>
                 </div>

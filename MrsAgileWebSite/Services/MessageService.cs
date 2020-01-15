@@ -55,14 +55,82 @@ namespace MrsAgileWebSite.Services
 
         private List<Message> GetEducationDetails(int id)
         {
-            return (new List<Message>());
+            var locId = id * 100;
+            return (new List<Message>() {  new Message(){Id = ++locId,
+                                                        MessageTitle ="Trainings" ,
+                                                        MessageSummary=@"(Udemy, PluralSight, Scrimba Memberships) React, .NET Core 3, SignalR Responsive Design, Serverless Web,
+WebApi, Angular, Docker, Microservices Architecture, PostgreSQL, Redis , Bootstrap, Azure, Jenkins ,Git
+Microsoft Certificated Professional -C# .NET 3.5 Foundation (2010)"},
+                                        new Message(){Id = ++locId,
+                                                        MessageTitle="Master of Science" ,
+                                                        MessageSummary=@"Engineering and Technology Management(2006 - 2008) Bogazici University, Turkey: Graduation project 1:
+“ERP Implementation in a Bank” -Graduation project 2: “Post Merger Integration"},
+                                        new Message(){Id = ++locId,
+                                                        MessageTitle="Bachelor of Science" ,
+                                                        MessageSummary=@"Engineering and Technology Management(2006 - 2008) Bogazici University, Turkey: Graduation project 1:
+“ERP Implementation in a Bank” -Graduation project 2: “Post Merger Integration"},
+            });
+
         }
 
+        /*Building a Continues Integration Server in Jenkins to support continues build and deployment processes for containerized applications runs in Kubernetes clusters. 
+
+Build a private docker registry with SSL support. 
+
+Build SSL for Gitlab registries. 
+
+Presented and introduced and implemented the Database change management tool Flyware for the Postgress database and added to the deployment process. 
+
+Supporting Java Script, JQuery, HTML code structure, Webservers and databases in the Microsoft Azure and Google Claud.  
+
+Designing the Git Workflow to support the expending team at different geographical locations 
+
+ */
+
+        private List<Message> GetConsultantJobDetails(int id)
+        {
+            var locIdDetail = id * 1000;
+            return (new List<Message>() { new Message() { Id = ++locIdDetail, MessageTitle = "*",
+            MessageSummary="Building a Continues Integration Server in Jenkins to support continues build and deployment processes for containerized applications runs in Kubernetes clusters. "
+                                                        } ,
+            new Message() { Id = ++locIdDetail, MessageTitle = "*",
+            MessageSummary="Build a private docker registry with SSL support. "
+                                                        },
+           new Message() { Id = ++locIdDetail, MessageTitle = "*",
+            MessageSummary="Build SSL for Gitlab registries. "
+                                                        },
+                      new Message() { Id = ++locIdDetail, MessageTitle = "*",
+            MessageSummary="Presented and introduced and implemented the Database change management tool Flyware for the Postgress database and added to the deployment process.  "
+                                                        },
+                      new Message() { Id = ++locIdDetail, MessageTitle = "*",
+            MessageSummary="Supporting Java Script, JQuery, HTML code structure, Webservers and databases in the Microsoft Azure and Google Claud. "
+                            },
+
+                      new Message() { Id = ++locIdDetail, MessageTitle = "*",
+            MessageSummary="Designing the Git Workflow to support the expending team at different geographical locations ."
+                            },
+
+            });
+        }
         private List<Message> GetEmploymentHistoryDetails(int id)
         {
-            return (new List<Message>());
+            var locId = id * 100;
+
+            return (new List<Message>() {  new Message(){Id = ++locId,
+                                                        MessageTitle =@"EyesClear - Contractor (11.2017 - 02.2019) Irvine, CA / US (Part-time Remote work for London, UK) 
+
+                Software Architecture Consultant
+
+ " ,
+
+                                                        MessageSummary="",
+                                                        MessageDetails= GetConsultantJobDetails(id)
+            } });
         }
 
+  
+
+        
         public MessageService()
         {
             _cv = new List<Message>() { new Message(){Id = 1, MessageTitle="Summary of Experience" , MessageSummary="High performance secure web sites ...",

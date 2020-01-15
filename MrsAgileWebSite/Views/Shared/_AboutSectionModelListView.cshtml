@@ -1,0 +1,21 @@
+﻿@model Message
+
+
+@{ if (Model.MessageSummary == "")
+    {
+        <ul>
+            @foreach (var detail in Model.MessageDetails)
+            {
+
+                <li>@detail.MessageSummary</li>
+
+            }
+        </ul>
+    } }
+@{ if (Model.MessageSummary != "")
+    {
+        <span class="border-left">
+            @Model.MessageSummary
+        </span>
+    }
+}

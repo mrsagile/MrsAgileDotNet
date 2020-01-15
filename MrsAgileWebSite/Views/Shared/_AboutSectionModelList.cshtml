@@ -1,0 +1,18 @@
+﻿@model Message
+@{
+    if (Model.MessageTitle == "*")
+    {
+        <li>@Model.MessageSummary</li>
+    }
+}
+
+@{if (Model.MessageTitle != "*")
+    {
+                <li>
+                    <div class="border-dark">
+                        <h5 class="text-black-50">@Model.MessageTitle</h5>
+                        <partial name="_AboutSectionModelListView" model="@Model" />
+                    </div>
+                </li>
+                }
+            }
