@@ -1,0 +1,17 @@
+﻿<h3>Projects</h3>
+<button @onclick="SetTitle">Set the Title</button>
+
+<h2>@Title</h2>
+
+@code {
+    private string title { get; set; }
+
+
+    public string Title { get { return title; } }
+
+    protected async Task SetTitle()
+    {
+        title = "Projects";
+    }
+
+}

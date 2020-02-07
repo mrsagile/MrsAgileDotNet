@@ -1,0 +1,37 @@
+﻿@page
+
+
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+@model MrsAgileWebSite.ProjectsModel
+
+
+    <div class="container mt-5 p-5" style="width:90%; background:grey;background-image:url('/images/Mrs Agile 2nd layout.jpg') ;position:absolute">
+        <h1 class="text-center">@Model.Greetings</h1>
+        <hr class="line1"/>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="burcucevik"><a class="LI-simple-link" href='https://www.linkedin.com/in/burcucevik?trk=profile-badge'>Burcu Cevik</a></div>
+             </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 projects-card">  
+       
+                        <a class="" href="https://github.com/burceviks">
+                            GitHub Projects
+                            <img src="~/images/GitHub-Mark-120px-plus.png" alt="github icon" />
+                        </a>
+             </div>       
+            <div class="col-lg-4 col-md-6 col-sm-12 projects-card">
+                    <a class="" href="http://mrsagile-website-test.surge.sh/yogaSampleSite/">
+                        Yogave WebSite
+                        <img src="~/images/yogave.JPG" alt="github icon" style="max-height:120px" />
+                    </a>
+               
+             </div>
+
+        </div>
+    </div>
+           
+        
